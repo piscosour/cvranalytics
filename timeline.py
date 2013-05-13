@@ -137,10 +137,13 @@ def word_map(sections, term):
 	for section in sections:
 			if section.fdist[term] > max_freq:
 				max_freq = section.fdist[term]
-
-	for section in sections:
-		print str(section.year) + ":",
-		print (section.fdist[term] * 50 / max_freq) * "#" + str(section.fdist[term])
+		
+	if max_freq == 0:
+		print "Term not found in timeline."
+	else:
+		for section in sections:
+			print str(section.year) + ":",
+			print (section.fdist[term] * 50 / max_freq) * "#" + str(section.fdist[term])
 		
 
 ## -- Things we do on load: -- ##
