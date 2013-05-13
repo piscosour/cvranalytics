@@ -20,9 +20,9 @@ class Section:
 ## Why does this not work as a method?
 
     def parse_section(self):
-		self.text = self.text.encode("utf-8")
-		self.tokens = nltk.word_tokenize(self.text)
-		self.ttext = nltk.Text(self.tokens)
+        self.text = self.text.encode("utf-8")
+        self.tokens = nltk.word_tokenize(self.text)
+        self.ttext = nltk.Text(self.tokens)
 
     def parse_events(self):
 	    category = None
