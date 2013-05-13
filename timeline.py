@@ -25,13 +25,13 @@ class Section:
         self.ttext = nltk.Text(self.tokens)
 
     def parse_events(self):
-	    category = None
-	    date = None
-	    month = None
-	    
-	    splitted = self.text.split("\n")
-	    
-	    for element in splitted:
+        category = None
+        date = None
+        month = None
+
+        splitted = self.text.split("\n")
+
+        for element in splitted:
 	    	if element == '' or element == ' ' or re.search(r'^\d\d$', element) is not None:
 				continue
             for month_check in months:
@@ -56,10 +56,10 @@ class Event:
 	"""An event listed in the document."""
 	
 	def __init__(self, text, date=None, category=None):
-		self.text = text
-		self.date = date
-		self.category = category
-		
+	    self.text = text
+	    self.date = date
+	    self.category = category
+
 
 ## -- Data -- ##
 
@@ -120,30 +120,30 @@ def year_split(data):
     return sections
 
 def parse_sections(sections):
-	for section in sections:
-		section.text = section.text.encode("utf-8")
-		section.tokens = nltk.word_tokenize(section.text)
-		section.ttext = nltk.Text(section.tokens)
-		section.fdist = nltk.FreqDist(section.ttext)
+    for section in sections:
+        section.text = section.text.encode("utf-8")
+        section.tokens = nltk.word_tokenize(section.text)
+        section.ttext = nltk.Text(section.tokens)
+        section.fdist = nltk.FreqDist(section.ttext)
 
 def yearly_collocations(sections):
-	for section in sections:
-		print section.year
-		section.ttext.collocations()
+    for section in sections:
+        print section.year
+        section.ttext.collocations()
 
 def word_map(sections, term):
-	max_freq = 0
+    max_freq = 0
 	
-	for section in sections:
-			if section.fdist[term] > max_freq:
-				max_freq = section.fdist[term]
-		
-	if max_freq == 0:
-		print "Term not found in timeline."
-	else:
-		for section in sections:
-			print str(section.year) + ":",
-			print (section.fdist[term] * 50 / max_freq) * "#" + str(section.fdist[term])
+    for section in sections:
+        if section.fdist[term] > max_freq:
+            max_freq = section.fdist[term]
+
+    if max_freq == 0:
+        print "Term not found in timeline."
+    else:
+        for section in sections:
+            print str(section.year) + ":",
+            print (section.fdist[term] * 50 / max_freq) * "#" + str(section.fdist[term])
 		
 
 ## -- Things we do on load: -- ##
