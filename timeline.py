@@ -9,15 +9,15 @@ import codecs
 class Section:
     """A section of the document with events for a single year."""
 
-    def __init__(self, year, text=None, tokens=None, ttext=None):
+    def __init__(self, year, text=None):
         self.year = year
         self.text = text
-        self.tokens = tokens
-        self.ttext = ttext
+        self.tokens = None
+        self.ttext = None
         self.events = []
         self.fdist = None
 
-## Why does this not work as a method?
+    ## Why does this not work as a method?
 
     def parse_section(self):
         self.text = self.text.encode("utf-8")
