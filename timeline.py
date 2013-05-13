@@ -32,33 +32,33 @@ class Section:
         splitted = self.text.split("\n")
 
         for element in splitted:
-	    	if element == '' or element == ' ' or re.search(r'^\d\d$', element) is not None:
-				continue
+            if element == '' or element == ' ' or re.search(r'^\d\d$', element) is not None:
+                continue
             for month_check in months:
-				if month_check in element:
-					month = month_check
-					continue
+                if month_check in element:
+                    month = month_check
+                    continue
             if month is not None:
-				for category_check in categories:
-					if category_check.decode("utf-8") in element:
-						category = category_check
-						continue
-				parse_date = re.findall(r'\d\d\sde\s\w+', element)
-				if date is None or parse_date == []:
-					date = month
-				else:
-					date = parse_date[0]
-				print date + "(" + category + "):" + element
-				self.events = self.events + [Event(element, date, category)]
+                for category_check in categories:
+                    if category_check.decode("utf-8") in element:
+                        category = category_check
+                        continue
+                parse_date = re.findall(r'\d\d\sde\s\w+', element)
+                if date is None or parse_date == []:
+                    date = month
+                else:
+                    date = parse_date[0]
+                print date + "(" + category + "):" + element
+                self.events = self.events + [Event(element, date, category)]
 
 
 class Event:
-	"""An event listed in the document."""
-	
-	def __init__(self, text, date=None, category=None):
-	    self.text = text
-	    self.date = date
-	    self.category = category
+    """An event listed in the document."""
+
+    def __init__(self, text, date=None, category=None):
+        self.text = text
+        self.date = date
+        self.category = category
 
 
 ## -- Data -- ##
