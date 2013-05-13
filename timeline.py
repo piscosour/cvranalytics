@@ -132,8 +132,23 @@ def yearly_collocations(sections):
 		section.ttext.collocations()
 
 def word_map(sections, term):
+	max_freq = 0
+	
 	for section in sections:
-		print str(section.year) + ": " + str(section.fdist[term])
+			if section.fdist[term] > max_freq:
+				max_freq = section.fdist[term]
+
+	for section in sections:
+		print str(section.year) + ":",
+		print (section.fdist[term] * 50 / max_freq) * "#" + str(section.fdist[term])
+		
+
+## -- Things we do on load: -- ##
+
+## We split the file on load to be able to operate directly.
 
 sections = year_split(data)
+
+## And parse the text into NLTK-operable fields.
+
 parse_sections(sections)
