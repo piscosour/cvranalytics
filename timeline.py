@@ -15,6 +15,7 @@ class Section:
         self.tokens = tokens
         self.ttext = ttext
         self.events = []
+        self.fdist = None
 
 ## Why does this not work as a method?
 
@@ -118,13 +119,21 @@ def year_split(data):
 
     return sections
 
-
-def yearly_collocations(sections):
+def parse_sections(sections):
 	for section in sections:
 		section.text = section.text.encode("utf-8")
 		section.tokens = nltk.word_tokenize(section.text)
 		section.ttext = nltk.Text(section.tokens)
+		section.fdist = nltk.FreqDist(section.ttext)
+
+def yearly_collocations(sections):
+	for section in sections:
 		print section.year
 		section.ttext.collocations()
 
+def word_map(sections, term):
+	for section in sections:
+		print str(section.year) + ": " + str(section.fdist[term])
+
 sections = year_split(data)
+parse_sections(sections)
