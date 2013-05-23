@@ -48,7 +48,8 @@ class Section:
                     date = month
                 else:
                     date = parse_date[0]
-                print str(date) + "(" + str(category) + "):" + str(element)
+                ## Next line added for debugging purposes:
+                ## print str(date) + "(" + str(category) + "):" + str(element)
                 self.events = self.events + [Event(element)]
                 self.events[len(self.events) - 1].set_date()
                 if self.events[len(self.events) - 1].set_date() is False:
@@ -66,7 +67,10 @@ class Event:
         self.text = text
         self.date = None
         self.category = None
-
+    
+    ## Date parser attempts to infer date from text. If unable to, returns False
+    ## and date can be assigned by calling function.
+    
     def set_date(self):
         date = re.findall(r'\d\d\sde\s\w+', self.text)
         
@@ -168,14 +172,44 @@ def word_map(sections, term):
         for section in sections:
             print str(section.year) + ":",
             print (section.fdist[term] * 50 / max_freq) * "#" + str(section.fdist[term])
-		
+
+def event_count(sections, category=None):
+    max_count = 0
+    total_count = 0
+	
+    for section in sections:
+        if len(section.events) > max_count:
+            max_count = len(section.events)
+    
+    print "Generating event count table."
+    for section in sections:
+        print str(section.year) + ":",
+        print ((len(section.events) * 50 / max_count) * "#") + str(len(section.events))
+        total_count = total_count + len(section.events)
+    print "Done. " + str(total_count) + " total events."
+
+
+def parse_events_all_sections(sections):
+    for section in sections:
+        section.parse_events()
+
 
 ## -- Things we do on load: -- ##
 
-## We split the file on load to be able to operate directly.
+## We split the file on load to have separate yearly sections.
 
+print "Parsing files into yearly sections...",
 sections = year_split(data)
+print "Done."
 
 ## And parse the text into NLTK-operable fields.
 
+print "Parsing text for natural language processing...",
 parse_sections(sections)
+print "Done."
+
+## Parse every section for event data (still very imperfect).
+
+print "Parsing sections for event data...",
+parse_events_all_sections(sections)
+print "Done."
