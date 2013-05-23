@@ -40,7 +40,7 @@ class Section:
                     continue
             if month is not None:
                 for category_check in categories:
-                    if category_check.decode("utf-8") in element:
+                    if category_check in element:
                         category = category_check
                         continue
                 parse_date = re.findall(r'\d\d\sde\s\w+', element)
@@ -48,8 +48,12 @@ class Section:
                     date = month
                 else:
                     date = parse_date[0]
-                print date + "(" + category + "):" + element
-                self.events = self.events + [Event(element, date, category)]
+                print str(date) + "(" + str(category) + "):" + str(element)
+                self.events = self.events + [Event(element)]
+                self.events[len(self.events) - 1].set_date()
+                if self.events[len(self.events) - 1].set_date() is False:
+                    self.events[len(self.events) - 1].date = month
+                self.events[len(self.events) - 1].set_category(category)
 
 
 class Event:
@@ -64,8 +68,15 @@ class Event:
         self.category = None
 
     def set_date(self):
-        self.date = re.findall(r'\d\d\sde\s\w+', self.text)
-    
+        date = re.findall(r'\d\d\sde\s\w+', self.text)
+        
+        if len(date) > 0:
+            self.date = date[0]
+            return True
+        else:
+            self.date = None
+            return False
+            
     def set_category(self, category):
         self.category = category
         
