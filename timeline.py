@@ -55,11 +55,20 @@ class Section:
 class Event:
     """An event listed in the document."""
 
-    def __init__(self, text, date=None, category=None):
+    ## Event is initialised only with text. Separate methods are called to set
+    ## date (based on parsing text) and category (based on context).
+    
+    def __init__(self, text):
         self.text = text
-        self.date = date
-        self.category = category
+        self.date = None
+        self.category = None
 
+    def set_date(self):
+        self.date = re.findall(r'\d\d\sde\s\w+', self.text)
+    
+    def set_category(self, category):
+        self.category = category
+        
 
 ## -- Data -- ##
 
@@ -78,6 +87,9 @@ sections = []
 
 ## Parses text file looking for year values, adds them to a list.
 
+## This was intended as a test function to get the year parsing correct.
+## Same procedure then implemented in year_split() on the actual data.
+
 def match_years(data):
     data.seek(0)
     years = []
@@ -87,8 +99,9 @@ def match_years(data):
 
     return years
 
-
 ## Parses text file looking for dates in Spanish format, adds them to list.
+## Originally intended to test date parsing. Implemented as a method within
+## the Event class.
 
 def match_dates(data):
     data.seek(0)
