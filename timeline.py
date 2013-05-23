@@ -17,7 +17,7 @@ class Section:
         self.events = []
         self.fdist = None
 
-    ## Why does this not work as a method?
+    ## Why does parse_section() not work as a method?
 
     def parse_section(self):
         self.text = self.text.encode("utf-8")
@@ -176,18 +176,70 @@ def word_map(sections, term):
 def event_count(sections, category=None):
     max_count = 0
     total_count = 0
+    max_cat_count = 0
+    yearly_cat_counts = []
 	
-    for section in sections:
-        if len(section.events) > max_count:
-            max_count = len(section.events)
+    if category is None:
+        for section in sections:
+            if len(section.events) > max_count:
+                max_count = len(section.events)
+        
+        print "Generating event count table."
+        for section in sections:
+            print str(section.year) + ":",
+            print ((len(section.events) * 50 / max_count) * "#") + str(len(section.events))
+            total_count = total_count + len(section.events)
+        print "Done. " + str(total_count) + " total events."
+    elif category is not None:
+        for section in sections:
+            cat_counter = 0
+            for event in section.events:
+                if event.category == category:
+                    cat_counter = cat_counter + 1
+            yearly_cat_counts = yearly_cat_counts + [cat_counter]
+            if cat_counter > max_cat_count:
+                max_cat_count = cat_counter
+        
+        print "Generating event count table for category " + str(category)
+        for i in range(len(sections)):
+            print str(sections[i].year) + ":",
+            print ((yearly_cat_counts[i] * 50 / max_cat_count) * "#") + str(yearly_cat_counts[i])
+            total_count = sum(yearly_cat_counts)
+        print "Done. " + str(total_count) + " total events."    
     
-    print "Generating event count table."
-    for section in sections:
-        print str(section.year) + ":",
-        print ((len(section.events) * 50 / max_count) * "#") + str(len(section.events))
-        total_count = total_count + len(section.events)
-    print "Done. " + str(total_count) + " total events."
 
+
+def show_events_slice(sections, year=None, category=None):
+    counter = 0
+    
+    if year is None and category is None:
+        print "Must specify year or category to generate slice."
+        return False
+    elif year is not None and category is None:
+        print "Generating slice for year " + str(year)
+        for section in sections:
+            if int(year) == section.year:
+                for event in section.events:
+                    print str(event.date) + ". " + str(event.text) + " (" + str(event.category) + ")"
+                    counter = counter + 1
+    elif year is not None and category is not None:
+        print "Generating slice for year " + str(year) + " and category " + str(category)
+        for section in sections:
+            if int(year) == section.year:
+                for event in section.events:
+                    if event.category == category:
+                        print str(event.date) + ". " + str(event.text) + " (" + str(event.category) + ")"
+                        counter = counter + 1
+    elif year is None and category is not None:
+        print "Generating slice for category " + str(category)
+        for section in sections:
+            print section.year
+            for event in section.events:
+                if event.category == category:
+                    print str(event.date) + ". " + str(event.text) + " (" + str(event.category) + ")"
+                    counter = counter + 1
+            print "\n"
+    print "Done. " + str(counter) + " events listed."
 
 def parse_events_all_sections(sections):
     for section in sections:
