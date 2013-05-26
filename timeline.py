@@ -246,22 +246,25 @@ def parse_events_all_sections(sections):
         section.parse_events()
 
 
-## -- Things we do on load: -- ##
+## -- Things we do on load (unless import): -- ##
 
-## We split the file on load to have separate yearly sections.
-
-print "Parsing files into yearly sections...",
-sections = year_split(data)
-print "Done."
-
-## And parse the text into NLTK-operable fields.
-
-print "Parsing text for natural language processing...",
-parse_sections(sections)
-print "Done."
-
-## Parse every section for event data (still very imperfect).
-
-print "Parsing sections for event data...",
-parse_events_all_sections(sections)
-print "Done."
+if __name__ == "__main__":
+    
+    ## We split the file on load to have separate yearly sections.
+    
+    print "Parsing files into yearly sections...",
+    sections = year_split(data)
+    print "Done."
+    
+    ## And parse the text into NLTK-operable fields.
+    
+    print "Parsing text for natural language processing...",
+    parse_sections(sections)
+    print "Done."
+    
+    ## Parse every section for event data (still very imperfect).
+    
+    print "Parsing sections for event data...",
+    parse_events_all_sections(sections)
+    print "Done."
+    
