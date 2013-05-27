@@ -4,7 +4,9 @@ import timeline
 import web
 
 render = web.template.render("templates/")
-## timeline.init_timeline()
+timeline_sections = []
+timeline_sections = timeline.init_timeline(timeline.data, timeline_sections)
+
 
 urls = (
     "/", "Index",
@@ -18,8 +20,8 @@ class Index:
 
 class Wordmap:
     def GET(self, term):
-        map = timeline.word_map(timeline.sections, str(term))
-        return render.wordmap(map)
+        map = timeline.word_map(timeline_sections, str(term))
+        return render.wordmap(map, term)
         
 class Eventcount:
     def GET(self, year, category):

@@ -1,8 +1,12 @@
-$def with (map)
+$def with (map, term)
 <html>
-<head></head>
+<head>
+<title>Wordmap for $term</title>
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+</head>
 <body>
-$for i in range(len(map)):
-    map[i]
+<p>Generating word map for $term:</p>
+$for element in map:
+    $element<br>
 </body>
 </html>
