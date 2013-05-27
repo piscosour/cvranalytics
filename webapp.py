@@ -21,7 +21,8 @@ class Index:
 class Wordmap:
     def GET(self, term):
         map = timeline.word_map(timeline_sections, str(term))
-        return render.wordmap(map, term)
+        max = sorted(map.values())[-1]
+        return render.wordmap(map, max, term)
         
 class Eventcount:
     def GET(self, year, category):

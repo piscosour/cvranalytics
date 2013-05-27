@@ -161,7 +161,7 @@ def yearly_collocations(sections):
 
 def word_map(sections, term):
     max_freq = 0
-    result_map = []
+    result_map = {}
 	
     for section in sections:
         if section.fdist[term] > max_freq:
@@ -172,9 +172,11 @@ def word_map(sections, term):
         print "Term not found in timeline."
     else:
         for section in sections:
-            print str(section.year) + ":",
-            print (section.fdist[term] * 50 / max_freq) * "#" + str(section.fdist[term])
-            result_map = result_map + [str(section.year) + ": " + (section.fdist[term] * 50 / max_freq) * "#" + str(section.fdist[term])]
+            if __name__ == "__main__":
+                print str(section.year) + ":",
+                print (section.fdist[term] * 50 / max_freq) * "#" + str(section.fdist[term])
+            else:
+                result_map[section.year] = section.fdist[term]
     
     return result_map
 

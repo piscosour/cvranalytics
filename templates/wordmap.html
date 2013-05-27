@@ -1,12 +1,24 @@
-$def with (map, term)
+$def with (map, max, term)
 <html>
 <head>
 <title>Wordmap for $term</title>
 <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
 </head>
 <body>
+<div class="container">
 <p>Generating word map for $term:</p>
-$for element in map:
-    $element<br>
+$for key, value in map.iteritems():
+    <table class="table table-condensed" style="width: 50%">
+    <tr>
+        <td style="width: 10%">$key</td>
+        <td style="width: 90%">
+            <div class="progress">
+                <div class="bar" style="width: ${value*100/max}%">$value</div>
+            </div>
+        </td>
+    </tr>
+    </table>
+
+</div>
 </body>
 </html>
