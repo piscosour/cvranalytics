@@ -3,13 +3,25 @@
 import timeline
 import web
 
+render = web.template.render("templates/")
+
 urls = (
-    "/", "Index"
+    "/(.*)", "Index",
+    "/wordmap/(.*)", "Wordmap",
+    "/eventcount/(.*)", "Eventcount"
 )
 
 class Index:
-    def GET(self):
-        return "Hello, world!"
+    def GET(self, name):
+        return render.index(name)
+
+class Wordmap:
+    def GET(self, term):
+        return render.wordmap(term)
+        
+class Eventcount:
+    def GET(self, year, category):
+        return render.eventcount(year, category)
 
 if __name__ == "__main__":
     app = web.application(urls, globals())
