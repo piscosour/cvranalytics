@@ -1,10 +1,8 @@
-$def with (term)
+$def with (map)
 <html>
 <head></head>
 <body>
-$if term:
-    word_map(term)
-$else:
-    "No term specified."
+$for i in range(len(map)):
+    map[i]
 </body>
 </html>

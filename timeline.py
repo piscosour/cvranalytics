@@ -161,17 +161,23 @@ def yearly_collocations(sections):
 
 def word_map(sections, term):
     max_freq = 0
+    result_map = []
 	
     for section in sections:
         if section.fdist[term] > max_freq:
             max_freq = section.fdist[term]
 
     if max_freq == 0:
+        result_map = result_map + ["Term not found in timeline."]
         print "Term not found in timeline."
     else:
         for section in sections:
             print str(section.year) + ":",
             print (section.fdist[term] * 50 / max_freq) * "#" + str(section.fdist[term])
+            result_map = result_map + [str(section.year) + ": " + (section.fdist[term] * 50 / max_freq) * "#" + str(section.fdist[term])]
+    
+    return result_map
+
 
 def event_count(sections, category=None):
     max_count = 0
@@ -244,6 +250,13 @@ def show_events_slice(sections, year=None, category=None):
 def parse_events_all_sections(sections):
     for section in sections:
         section.parse_events()
+
+def init_timeline(data, sections):
+    sections = year_split(data)
+    parse_sections(sections)
+    parse_events_all_sections(sections)
+    
+    return sections
 
 
 ## -- Things we do on load (unless import): -- ##
