@@ -6,18 +6,21 @@ $def with (map, max, term)
 </head>
 <body>
 <div class="container">
-<p>Generating word map for $term:</p>
-$for key, value in map.iteritems():
-    <table class="table table-condensed" style="width: 50%">
-    <tr>
-        <td style="width: 10%">$key</td>
-        <td style="width: 90%">
-            <div class="progress">
-                <div class="bar" style="width: ${value*100/max}%">$value</div>
-            </div>
-        </td>
-    </tr>
-    </table>
+$if map is not False:
+    <p>Generating word map for $term:</p>
+    $for key, value in map.iteritems():
+        <table class="table table-condensed" style="width: 50%">
+        <tr>
+            <td style="width: 10%">$key</td>
+            <td style="width: 90%">
+                <div class="progress">
+                    <div class="bar" style="width: ${value*100/max}%">$value</div>
+                </div>
+            </td>
+        </tr>
+        </table>
+$else:
+    <p>Term not found in timeline.</p>
 
 </div>
 </body>

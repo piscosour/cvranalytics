@@ -168,8 +168,8 @@ def word_map(sections, term):
             max_freq = section.fdist[term]
 
     if max_freq == 0:
-        result_map = result_map + ["Term not found in timeline."]
         print "Term not found in timeline."
+        return False
     else:
         for section in sections:
             if __name__ == "__main__":

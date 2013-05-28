@@ -21,7 +21,10 @@ class Index:
 class Wordmap:
     def GET(self, term):
         map = timeline.word_map(timeline_sections, str(term))
-        max = sorted(map.values())[-1]
+        if map == False:
+            max = 0
+        else:
+            max = sorted(map.values())[-1]
         return render.wordmap(map, max, term)
         
 class Eventcount:
