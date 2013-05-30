@@ -1,15 +1,22 @@
 $def with (map, max, term)
 <html>
 <head>
-<title>Wordmap for $term</title>
+<title>CVRanalytics - Mapeo del término $term</title>
 <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
 </head>
 <body>
 <div class="container">
     <div class="row">
+        <div class="span12">
+            <h1>Mapeo del término "$term"</h1>
+            <p>Genera un conteo de la frecuencia con la que aparece el término seleccionado a través de los años en la sección Cronología de los eventos, incluida en los apéndices del Informe Final.</p>
+            <p><a href="/">Volver a la página principal</a></p>
+        </div>
+    </div>
+    <div class="row">
         <div class="span8 offset2">
         $if map is not False:
-            <p>Generating word map for $term:</p>
+            <p>Generando mapeo para el término "$term":</p>
             $for key, value in map.iteritems():
                 <table class="table table-condensed" style="width: 100%">
                 <tr>
@@ -22,7 +29,7 @@ $def with (map, max, term)
                 </tr>
                 </table>
         $else:
-            <p>Term not found in timeline.</p>
+            <p>El término no aparece en la cronología.</p>
         </div>
     </div>
 </div>
