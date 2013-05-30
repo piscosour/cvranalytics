@@ -31,21 +31,19 @@ class Index:
     def GET(self):
         f = term_select()
         return render.index(f)
-    
-    def POST(self):
-        f = term_select()
-        fetch = Wordmap()
-        return f.d
         
 class Wordmap:
     def GET(self, term):
+        user_term = web.input(term=None)
+        if user_term.term is not None:
+            term = user_term.term
         map = timeline.word_map(timeline_sections, str(term))
         if map == False:
             max = 0
         else:
             max = sorted(map.values())[-1]
         return render.wordmap(map, max, term)
-        
+
 class Eventcount:
     def GET(self, year, category):
         return render.eventcount(year, category)
