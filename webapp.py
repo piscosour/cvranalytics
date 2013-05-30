@@ -11,11 +11,15 @@
 
 import timeline
 import web
+from web import form
 
 render = web.template.render("templates/")
 timeline_sections = []
 timeline_sections = timeline.init_timeline(timeline.data, timeline_sections)
 
+term_select = form.Form(
+    form.Textbox("term", description="Buscar:")
+)
 
 urls = (
     "/", "Index",
@@ -25,8 +29,14 @@ urls = (
 
 class Index:
     def GET(self):
-        return render.index()
-
+        f = term_select()
+        return render.index(f)
+    
+    def POST(self):
+        f = term_select()
+        fetch = Wordmap()
+        return f.d
+        
 class Wordmap:
     def GET(self, term):
         map = timeline.word_map(timeline_sections, str(term))
