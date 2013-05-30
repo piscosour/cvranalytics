@@ -1,4 +1,13 @@
 # -*- coding: utf-8 -*-
+## CVRanalytics: webapp.py
+
+## Provides a web-based front end using the web.py framework for easy access
+## to the data and functions in CVRanalytics.
+
+## Originally developed by Eduardo Marisca @ MIT (emarisca[at]mit[dot]edu).
+## Released under a Creative Commons NC-BY-SA 3.0 license.
+## Code and additional info available at http://github.com/piscosour/cvranalytics
+
 
 import timeline
 import web

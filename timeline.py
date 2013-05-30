@@ -1,4 +1,15 @@
 # -*- coding: utf-8 -*-
+## CVRanalytics: timeline.py
+
+## Parses the "Timeline of Events" section in the Final Report of the
+## Peruvian Truth and Reconciliation Commission, and applies natural language
+## processing to allow identification of patterns in event data. Uses
+## webapp.py as a web front end using the web.py framework.
+
+## Originally developed by Eduardo Marisca @ MIT (emarisca[at]mit[dot]edu).
+## Released under a Creative Commons NC-BY-SA 3.0 license.
+## Code and additional info available at http://github.com/piscosour/cvranalytics
+
 
 import nltk
 import re
