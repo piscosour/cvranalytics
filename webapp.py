@@ -37,6 +37,8 @@ class Wordmap:
         user_term = web.input(term=None)
         if user_term.term is not None:
             term = user_term.term
+        ## if "," in term:
+        ##    terms = split(term, ",")
         map = timeline.word_map(timeline_sections, str(term))
         if map == False:
             max = 0
