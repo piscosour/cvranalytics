@@ -2,54 +2,47 @@
 ## CVRanalytics: webapp.py
 
 ## Provides a web-based front end using the web.py framework for easy access
-## to the data and functions in CVRanalytics.
+## to the data and functions in CVRanalytics. Updated version using Flask instead
+## of web.py.
 
 ## Originally developed by Eduardo Marisca @ MIT (emarisca[at]mit[dot]edu).
 ## Released under a Creative Commons NC-BY-SA 3.0 license.
 ## Code and additional info available at http://github.com/piscosour/cvranalytics
 
+from flask import Flask
+from flask import render_template
+from flask import request
 
 import timeline
-import web
-from web import form
+import conclusions
+from conclusions import conclusions_list
 
-render = web.template.render("templates/")
-timeline_sections = []
-timeline_sections = timeline.init_timeline(timeline.data, timeline_sections)
+## Initialise Flask app
 
-term_select = form.Form(
-    form.Textbox("term", description="Buscar:")
-)
+app = Flask(__name__)
 
-urls = (
-    "/", "Index",
-    "/wordmap/(.*)", "Wordmap",
-    "/eventcount/(.*)", "Eventcount"
-)
+@app.route("/conclusion/<int:conclusion_id>")
+def render_conclusion(conclusion_id):
+    global conclusions_list
+    for element in conclusions_list:
+        if conclusion_id == element.id:
+            return render_template("conclusion.html", conclusion=element)
+    else:
+        return "Conclusion not found."
 
-class Index:
-    def GET(self):
-        f = term_select()
-        return render.index(f)
-        
-class Wordmap:
-    def GET(self, term):
-        user_term = web.input(term=None)
-        if user_term.term is not None:
-            term = user_term.term
-        ## if "," in term:
-        ##    terms = split(term, ",")
-        map = timeline.word_map(timeline_sections, str(term))
-        if map == False:
-            max = 0
-        else:
-            max = sorted(map.values())[-1]
-        return render.wordmap(map, max, term)
+@app.route("/conclusion/tags/<tag>")
+def render_tagged_conclusions(tag, data=conclusions_list):
+    selection = []
+    
+    for element in data:
+        if tag in element.tags:
+            selection = selection + [element]
+    
+    return render_template("tagged_list.html", tag=tag, selection=selection)
 
-class Eventcount:
-    def GET(self, year, category):
-        return render.eventcount(year, category)
+
+## Run app
 
 if __name__ == "__main__":
-    app = web.application(urls, globals())
+    app.debug = True
     app.run()

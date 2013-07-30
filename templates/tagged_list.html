@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Conclusiones con la etiqueta "{{ tag }}"{% endblock title %}
+{% block content %}
+{% for element in selection %}
+<div class="row">
+    <div class="span8 offset2">
+        <h3>{{ element.id }}.</h3>
+        <p class="lead">{{ element.text }}</p>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}

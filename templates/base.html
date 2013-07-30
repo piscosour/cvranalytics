@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+</head>
+
+<body>
+<div class="container">
+    {% if message is defined %}
+    <div class="row">
+        <div class="span4 offset4">
+            <div class="alert alert-info">
+                {{ message }}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% block content %}{% endblock content %}
+</div>
+</body>
+</html>
