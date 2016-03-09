@@ -20,4 +20,4 @@ mem0r1a's first iteration, as CVRanalytics, was built on Python and used the NLT
 
 ### Credits
 
-CVRanalytics was originally developed by <a href="http://marisca.pe">Eduardo Marisca</a> at <a href="http://web.mit.edu">MIT</a>, as a class project in exploratory programming for Nick Montfort's Workshop in Comparative Media. The code is freely available for anyone to use, and the document of the Report itself is in the public domain under Peruvian legislation and can be found in its entirety at http://cverdad.org.pe/ifinal/index.php.
+mem0r1a was originally developed by <a href="http://marisca.pe">Eduardo Marisca</a> at <a href="http://web.mit.edu">MIT</a>, as a class project in exploratory programming for Nick Montfort's Workshop in Comparative Media. The code is freely available for anyone to use, and <a href="http://cverdad.org.pe/ifinal/index.php">the document of the Report itself</a> is in the public domain under Peruvian legislation.
