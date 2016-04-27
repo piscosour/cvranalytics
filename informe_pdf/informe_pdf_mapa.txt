@@ -1,0 +1,209 @@
+INFORME FINAL
+
+[Parte]_[Sección]_[Capítulo]_[Subcapítulo]_
+
+00_Preliminares
+
+	00_01_Portada
+	00_02_Firmas
+
+01_EL PROCESO, LOS HECHOS, LAS VÍCTIMAS
+
+	01_00_01_Prefacio
+	01_00_02_Introducción
+	01_01_Exposición general del proceso
+		01_01_01_Los períodos de la violencia
+		01_01_02_El despliegue regional
+		01_01_03_Los rostros y perfiles de la violencia
+		01_01_04_La dimensión jurídica de los hechos
+	01_02_Los actores del conflicto
+		01_02_01_Los actores armados
+			01_02_01_01_El Partido Comunista del Perú Sendero Luminoso
+				01_02_01_01_01_PCP-SL Origen
+				01_02_01_01_02_PCP-SL 1980-82
+				01_02_01_01_03_PCP-SL 1983-85
+				01_02_01_01_04_PCP-SL 1986-92
+				01_02_01_01_05_PCP-SL 1992-2000
+				01_02_01_01_06_Conclusiones
+				01_02_01_01_07_Apéndice 1: Ejército Guerrillero Popular
+				01_02_01_01_08_Apéndice 2: Antecedentes de PCP-SL 1930-70
+				01_02_01_01_09_Apéndice 3: Estructura Partidaria del PCP-SL
+			01_02_01_02_Las Fuerzas Policiales
+			01_02_01_03_Las Fuerzas Armadas
+			01_02_01_04_El Movimiento Revolucionario Túpac Amaru
+			01_02_01_05_Los comités de autodefensa
+		01_02_02_Los actores políticos e institucionales
+			01_02_02_01_El gobierno de Acción Popular
+			01_02_02_02_El gobierno del Partido Aprista Peruano
+			01_02_02_03_La década del noventa y los dos gobiernos de Alberto Fujimori
+			01_02_02_04_Los partidos de izquierda
+			01_02_02_05_El Poder Legislativo
+			01_02_02_06_El Poder Judicial
+		01_02_03_Las organizaciones sociales
+			01_02_03_01_El movimiento de derechos humanos
+			01_02_03_02_Los sindicatos, los gremios empresariales y las organizaciones de mujeres
+			01_02_03_03_La Iglesia Católica y las iglesias evangélicas
+			01_02_03_04_Los medios de comunicación
+			01_02_03_05_El sistema educativo y el magisterio
+			01_02_03_06_Las universidades
+	01_03_Los escenarios de la violencia
+		01_03_01_La violencia en las regiones
+			01_03_01_01_La región Sur Central
+			01_03_01_02_La región Central
+			01_03_01_03_La región Sur Andino
+			01_03_01_04_La región Nororiental
+			01_03_01_05_La región Lima Metropolitana
+			01_03_01_06_Los ejes complementarios
+		01_03_02_Historias representativas de la violencia
+			01_03_02_01_El PCP-SL en el campo ayacuchano: los inicios del conflicto armado interno
+			01_03_02_02_La violencia en las comunidades de Lucanamarca, Sancos y Sacsamarca
+			01_03_02_03_Los casos de Chungui y de la Oreja de Perro
+			01_03_02_04_El caso Uchuraccay
+			01_03_02_05_La SAIS Cahuide
+			01_03_02_06_Los sindicatos mineros
+			01_03_02_07_Molinos: derrota del MRTA en la región central
+			01_03_02_08_Los pueblos indígenas y el caso de los asháninkas
+			01_03_02_09_El PCP-SL durante el auge de la droga en el Alto Huallaga
+			01_03_02_10_El frente nororiental del MRTA en San Martín
+			01_03_02_11_La violencia y el narcotráfico en las provincias de Padre Abad y Coronel Portillo 
+			01_03_02_12_La estrategia de pacificación en la margen izquierda del río Huallaga
+			01_03_02_13_La violencia en Huaycán
+			01_03_02_14_Raucana: un intento de comité político abierto
+			01_03_02_15_Los sindicatos de la carretera central: entre el radicalismo o la resignación 
+			01_03_02_16_La batalla por las barriadas de Lima: el caso de Villar El Salvador
+			01_03_02_17_El PCP-SL y la batalla por Puno
+			01_03_02_18_La Universidad Nacional San Cristóbal de Huamanga
+			01_03_02_19_La Universidad Nacional de Educación Enrique Guzmán y Valle, La Cantuta
+			01_03_02_20_La Universidad Nacional Mayor de San Marcos
+			01_03_02_21_La Universidad Nacional del Centro
+			01_03_02_22_Las cárceles
+			01_03_02_23_Narcotráfico, conflicto armado interno y corrupción
+	01_04_los crímenes y violaciones de los derechos humanos
+		01_04_01_Patrones en la perpetración de los crímenes y de las violaciones de los derechos humanos
+			01_04_01_01_Los asesinatos y las masacres
+			01_04_01_02_Las desapariciones forzadas
+			01_04_01_03_Las ejecuciones arbitrarias
+			01_04_01_04_La tortura y los tratos crueles, inhumanos o degradantes
+			01_04_01_05_La violencia sexual contra la mujer
+			01_04_01_06_La violación del debido proceso
+			01_04_01_07_El secuestro y la toma de rehenes
+			01_04_01_08_La violencia contra los niños y niñas
+			01_04_01_09_La violación de los derechos colectivos
+		01_04_02_Los casos investigados por la CVR
+			01_04_02_01_Las ejecuciones extrajudiciales en el Hospital de Ayacucho (1982)
+			01_04_02_02_El atentado contra el local de Acción Popular (1983)
+			01_04_02_03_Ejecución extrajudicial en la base militar de Totos (1983)
+			01_04_02_04_Los asesinatos de Canchacancha (1983)
+			01_04_02_05_Las ejecuciones extrajudiciales en Sillaccasa (1983)
+			01_04_02_06_Las ejecuciones extrajudiciales en Lucanamarca (1983)
+			01_04_02_07_Las ejecuciones extrajudiciales en Socos (1983)
+			01_04_02_08_Las ejecuciones extrajudiciales en Ccarpaccasa (1983)
+			01_04_02_09_Desapariciones, torturas y ejecuciones extrajudiciales en la base militar Los Cabitos (1983-1985)
+			01_04_02_10_Ejecuciones extrajudiciales de creyentes evangélicos en Callqui (1984)
+			01_04_02_11_Ejecuciones extrajudiciales comprobadas en las fosas de Pucayacu (1984)
+			01_04_02_12_La desaparición del periodista Jaime Ayala (1984)
+			01_04_02_13_La tortura y ejecución extrajudicial de Jesús Oropeza (1984)
+			01_04_02_14_Ejecuciones extrajudiciales en Putis (1984)
+			01_04_02_15_Las ejecuciones extrajudiciales en Accomarca (1985)
+			01_04_02_16_Lesiones graves producidas a Domingo García Rada (1985)
+			01_04_02_17_Las ejecuciones extrajudiciales en Pucayacu II (1985)
+			01_04_02_18_Ataque del PCP-SL a la localidad de Marcas (1985)
+			01_04_02_19_Los asesinatos del comando paramilitar autodenominado Rodrigo Franco (1985-1990)
+			01_04_02_20_El asesinato del almirante Ponce Canessa (1986)
+			01_04_02_21_Los asesinatos en Huayao (1992)
+			01_04_02_22_Las ejecuciones extrajudiciales de universitarios de La Cantuta (1992)
+			01_04_02_23_Las ejecuciones extrajudiciales de Pomatambo y Parcco Alto (1986)
+			01_04_02_24_El asesinato de Rodrigo Franco (1987)
+			01_04_02_25_El asesinato de César López Silva (1987)
+			01_04_02_26_Desapariciones en la base militar de Santa Rosa (Checcasa) (1988)
+			01_04_02_27_Las ejecuciones extrajudiciales y encubrimiento en Cayara (1988)
+			01_04_02_28_Masacre en la comunidad de Aranhuay (1988)
+			01_04_02_29_Asesinato de autoridades comunales de Changos Alto y Chicche (1989)
+			01_04_02_30_La desaparición del jefe asháninka Alejandro Calderón (1989)
+			01_04_02_31_La masacre de los pobladores de Pacchas en Huamanga (1989)
+			01_04_02_32_Las ejecuciones extrajudiciales de Abel Malpartida Páez y Luis Álvarez (1989)
+			01_04_02_33_Los asesinatos durante el ataque al puesto policial de Uchiza (1989)
+			01_04_02_34_Los asesinatos de Bárbara D’Achille y Carlos Bohórquez (1989)
+			01_04_02_35_El asesinato de Fermín Azparrent (1989)
+			01_04_02_36_El ataque al regimiento Húsares de Junín (1989)
+			01_04_02_37_Las ejecuciones extrajudiciales en el distrito de Los Molinos (1989)
+			01_04_02_38_Las ejecuciones extrajudiciales de Pucará (1989)
+			01_04_02_39_Asesinato de nueve pobladores en Yumbatos, San Martín (1989)
+			01_04_02_40_La desaparición de Ángel Escobar Jurado (1990)
+			01_04_02_41_Desapariciones y torturas en la base militar Los Laureles (Esaú Cajas) (1990) 
+			01_04_02_42_Desapariciones y ejecuciones extrajudiciales en Chumbivilcas (1990)
+			01_04_02_43_El asesinato de Orestes Rodríguez (1990)
+			01_04_02_44_Las desapariciones de los estudiantes de la Universidad Nacional del Centro (1990-1992)
+			01_04_02_45_Las ejecuciones extrajudiciales en Barrios Altos (1991)
+			01_04_02_46_Desapariciones forzadas y asesinato de autoridades en Chuschi (1991)
+			01_04_02_47_Desapariciones de los candidatos a la alcadía de Huancapi (1991)
+			01_04_02_48_El asesinato de Porfirio Suni (1991)
+			01_04_02_49_Los asesinatos de los sacerdotes Strzalkowski, Tomaszek y Dordi (1991)
+			01_04_02_50_Las ejecuciones extrajudiciales en Santa Bárbara (1991)
+			01_04_02_51_Lesiones graves producidas a Ana Lira (1992)
+			01_04_02_52_Las ejecuciones extrajudiciales en Apiza (1992)
+			01_04_02_53_La desaparición de campesinos del Santa (1992)
+			01_04_02_54_El secuestro y asesinato de David Ballón Vera (1992)
+			01_04_02_55_El asesinato de Manuel Tumba (1992)
+			01_04_02_56_El secuestro del empresario Samuel Dyer Ampudia (1992)
+			01_04_02_57_Los asesinatos de María Elena Moyano (1992) y Pascuala Rosado (1996)
+			01_04_02_58_El asesinato de Pedro Huillca Tecse (1992)
+			01_04_02_59_La desaparición de Pedro Yauri (1992)
+			01_04_02_60_Los asesinatos y lesiones graves producidos en el atentado de Tarata (1992)
+			01_04_02_61_Los asesinatos en Pichanaki (1993)
+			01_04_02_62_La injusta incriminación y tratos crueles contra Juan Mallea (1993) 
+			01_04_02_63_Asesinato de policías, autoridades locales y candidatos en Ajoyani y Antauta (1993)
+			01_04_02_64_Las ejecuciones extrajudiciales durante la estrategia contrasubversiva en la margen izquierda del río Huallaga (1989-1994)
+			01_04_02_65_El asesinato de Indalecio Pomatanta (1995)
+			01_04_02_66_Las ejecuciones extrajudiciales en la residencia del embajador de Japón (1997)
+			01_04_02_67_Las ejecuciones extrajudiciales en el penal de El Frontón y Lurigancho (1986)
+			01_04_02_68_Las ejecuciones extrajudiciales en el penal de Canto Grande (1992)
+			01_04_02_69_Asesinato de campesinos en Lucmahuaycco (1984)
+			01_04_02_70_Asesinatos y violaciones de los derechos humanos en Mazamari (1993)
+			01_04_02_71_Violaciones de los derechos humanos en la base militar de Capaya (1987-1989)
+			01_04_02_72_La tortura y el asesinato de Rafael Salgado Castilla (1992)
+			01_04_02_73_Las ejecuciones extrajudiciales de Luis Morales Ortega, la familia Solier, Leonor Zamora y otros (1991)
+
+02_LOS FACTORES QUE HICIERON POSIBLE LA VIOLENCIA
+
+	02_00_01_Explicando el conflicto armado interno
+	02_00_02_El impacto diferenciado de la violencia
+		02_00_02_01_Violencia y desigualdad de género
+		02_00_02_02_Violencia y desigualdad racial étnica
+
+03_LAS SECUELAS DE LA VIOLENCIA
+
+	03_00_00_Introducción
+	03_00_01_Las secuelas psicosociales
+		03_00_01_00_Las secuelas psicosociales
+		03_00_01_01_Apéndice 1: Cuantitativo
+		03_00_01_02_Apéndice 2: El Proceso de Exhumación de Fosas
+	03_00_02_Las secuelas sociopolíticas
+	03_00_03_Las secuelas económicas
+	03_00_04_Conclusiones generales
+	03_00_05_Carta General Luis Arias Graziani
+
+04_RECOMENDACIONES DE LA CVR, HACIA UN COMPROMISO NACIONAL POR LA RECONCILIACIÓN
+
+	04_00_01_Fundamentos de la reconciliación
+	04_00_02_Recomendaciones
+		04_00_02_00_Recomendaciones
+		04_00_02_01_Reformas Institucionales
+		04_00_02_02_Programa Integral de Reparaciones
+		04_00_02_03_Plan Nacional de Intervención Antropológico-Forense
+		04_00_02_04_Mecanismos de seguimiento
+
+05_ANEXOS
+
+	05_01_Anexo 1: Memoria institucional
+	05_02_Anexo 2: Cronología 1978-2000
+	05_03_Anexo 3: Estimación del total de víctimas
+	05_04_Anexo 4: Compendio estadístico
+	05_05_Anexo 5: Casos y víctimas registradas por la CVR
+	05_06_Anexo 6: Informe de la base de datos para la investigación cualitativa (BDI)
+	05_07_Anexo 7: Informe de la unidad de salud mental
+	05_08_Anexo 8: Iniciativa sobre personas desaparecidas conformada por la CVR, la Defensoría del Pueblo, la CNDDHH y el CICR
+	05_09_Anexo 9: Programa Integral de Reparaciones
+	05_10_Anexo 10: Audiencias públicas
+	05_11_Anexo 11: Sesiones de balance y perspectivas
+	05_12_Anexo 12: Bases de datos digitales
