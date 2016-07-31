@@ -52,7 +52,7 @@ def build_dictionary(parsed_data):
     return conclusions_dict
 
 conclusions = parse_conclusions(datafile)
-# print json.dumps(build_dictionary(conclusions), sort_keys=False, indent=4, separators=(',', ': '))
+
 with open('cvr_conclusiones.json', 'w') as output:
     json.dump(build_dictionary(conclusions), output, sort_keys=False, indent=4, separators=(',', ': '))
 
